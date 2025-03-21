@@ -1,0 +1,22 @@
+/* filepath: c:\Users\laure\Desktop\Mon_portfolio\lolopf\src\components\Home\Home.css */
+
+.dynamic-title {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dynamic-title-enter-active {
+  opacity: 1;
+}
+
+.dynamic-title-enter {
+  opacity: 0;
+}
+
+.dynamic-title-exit {
+  opacity: 1;
+}
+
+.dynamic-title-exit-active {
+  opacity: 0;
+}

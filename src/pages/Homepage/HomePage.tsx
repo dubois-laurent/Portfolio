@@ -1,5 +1,4 @@
 import React from 'react';
-import "./Home-module.css"
 import Home from "../../components/Home/Home"
 
 const HomePage: React.FC = () => {

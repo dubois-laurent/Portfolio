@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import "./Home-module.css";
+import './Home-module.css';
 
 const Home: React.FC = () => {
-    const titles = ["Front end", "Back end", "Full Stack"];
-    const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const titles = ["Front end", "Back end", "Full Stack"];
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-        }, 3000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+        setFade(true);
+      }, 500);
+    }, 2500);
 
-        return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
-    return (
-        <h1>
-            <span className="dynamic-title">{titles[currentTitleIndex]}</span>
-        </h1>
-    );
+  return (
+    <h1>
+      <span className={`dynamic-title ${fade ? 'dynamic-title-enter-active' : 'dynamic-title-exit-active'}`}>
+        {titles[currentTitleIndex]}
+      </span>
+    </h1>
+  );
 };
 
 export default Home;
