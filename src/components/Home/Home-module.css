@@ -1,7 +1,6 @@
 /* filepath: c:\Users\laure\Desktop\Mon_portfolio\lolopf\src\components\Home\Home.css */
 
 .dynamic-title {
-  display: inline-block;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -19,4 +18,9 @@
 
 .dynamic-title-exit-active {
   opacity: 0;
+}
+
+.dynamic-title {
+  font-family: Syne, sans-serif;
+  letter-spacing: 10px
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Home-module.css';
 
 const Home: React.FC = () => {
-  const titles = ["Front end", "Back end", "Full Stack"];
+  const titles = ["LAURENT DUBOIS","FRONT END", "BACK END", "FULL STACK"];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
