@@ -5,23 +5,6 @@ import './Homepage-module.css';
 import logo from '../../assets/images/Logo.png';
 
 const HomePage: React.FC = () => {
-    useEffect(() => {
-        const cursor = document.querySelector('.custom-cursor') as HTMLElement;
-
-        const handleMouseMove = (e: MouseEvent) => {
-            if (cursor) {
-                cursor.style.left = `${e.clientX}px`;
-                cursor.style.top = `${e.clientY}px`;
-            }
-        };
-    
-
-        document.addEventListener('mousemove', handleMouseMove);
-
-        return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
 
     return (
         <div className="homeContainer">
