@@ -1,24 +1,45 @@
-import React from 'react';
-import "./Home-module.css"
-import Home from "../../components/Home/Home"
+import React, { useEffect } from 'react';
+import Home from "../../components/Home/Home";
+import { Link } from 'react-router-dom';
+import './Homepage-module.css';
+import logo from '../../assets/images/Logo.png';
 
 const HomePage: React.FC = () => {
+    useEffect(() => {
+        const cursor = document.querySelector('.custom-cursor') as HTMLElement;
+
+        const handleMouseMove = (e: MouseEvent) => {
+            if (cursor) {
+                cursor.style.left = `${e.clientX}px`;
+                cursor.style.top = `${e.clientY}px`;
+            }
+        };
+    
+
+        document.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
     return (
         <div className="homeContainer">
             <header className="header">
-                <img className="logo" alt="mon logo" />
+                <div className="logo-container">
+                    <img className="logo" src={logo} alt="mon logo" />
+                    <span className="logo-text">Laurent Dubois</span>
+                </div>
                 <nav className="nav">
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/contact">Contact</Link>
                 </nav>
             </header>
-            <main className="mainContainer">
+            <div className="mainContainer">
                 <Home />
-                <h2>Developer</h2>
-            </main>
+            </div>
         </div>
     );
-}
+};
 
 export default HomePage;
-    
