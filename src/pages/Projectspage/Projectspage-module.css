@@ -1,62 +1,44 @@
-.home {
-    text-decoration: none;
-    display: flex;
+
+.projects-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .nav-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    height: 80vh;
-}
-.nav-projects a {
-    text-decoration: none;
-    display:flex;
-    justify-items: center;
-    align-items: center;
-    color: #d1e8e2;
-    font-size: 2.5rem;
-    font-family: 'Syne';
-    letter-spacing: 12px;
-    font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 80vh;
 }
 
-.nav-projects a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d1e8e2;
-    font-size: 2.5rem;
-    font-family: 'Syne';
-    letter-spacing: 12px;
-    font-weight: 700;
-    position: relative; /* Nécessaire pour positionner les pseudo-éléments */
+.project-link {
+  text-decoration: none;
+  color: #d1e8e2;
+  font-size: 2.5rem;
+  font-family: 'Syne';
+  letter-spacing: 12px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
 }
 
-.nav-projects a::before,
-.nav-projects a::after {
-    content: "X"; /* Texte à afficher */
-    color: #d1e8e2; /* Couleur des "X" */
-    font-size: 2.5rem;
-    font-family: 'Syne';
-    font-weight: 700;
-    position: absolute;
-    opacity: 0; /* Masquer par défaut */
-    transition: opacity 0.3s ease; /* Animation pour un effet fluide */
+.project-link:not(.active) {
+  opacity: 0.2; /* Rendre les autres liens presque invisibles */
 }
 
-.nav-projects a::before {
-    left: -50px; /* Positionner à gauche du lien */
-}
-
-.nav-projects a::after {
-    right: -50px; /* Positionner à droite du lien */
-}
-
-.nav-projects a:hover::before,
-.nav-projects a:hover::after {
-    opacity: 1; /* Afficher les "X" au survol */
+.project-link.active {
+  opacity: 1; /* Le lien survolé reste visible */
 }

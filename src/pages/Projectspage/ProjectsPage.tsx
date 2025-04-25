@@ -1,18 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
 import './Projectspage-module.css';
 
 const ProjectsPage: React.FC = () => {
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  console.log(hoveredLink);
+
   return (
-    <div>
-      <Link to="/Portfolio" className='home'>
+    <div className="projects-page">
+      <Link to="/Portfolio" className="home">
         <Logo />
       </Link>
+      <video
+        className="background-video"
+        autoPlay
+        loop
+        muted
+        src={
+          hoveredLink === 'SCROLLY'
+            ? '/videos/Bg-SCROLLY.mp4'
+            : hoveredLink === 'Alter'
+            ? 'https://www.w3schools.com/html/mov_bbb.mp4'
+            : hoveredLink === 'Helico'
+            ? 'https://www.w3schools.com/html/mov_bbb.mp4'
+            : 'http://localhost:3000/videos/Bg-Scrolly.mp4'
+        }
+        onLoadedData={() => console.log('Video loaded: ', hoveredLink)}
+        onError={() => console.error('Error loading video: ', hoveredLink)}
+      ></video>
       <nav className="nav-projects">
-        <Link to="/Scrolly">SCROLLY</Link>
-        <Link to="/Alter">ALTER</Link>
-        <Link to="/Helico">HELICO PAT</Link>
+                <Link
+          to="/SCROLLY"
+          className={`project-link ${hoveredLink === 'SCROLLY' ? 'active' : ''}`}
+          onMouseEnter={() => {
+            setHoveredLink('SCROLLY');
+          }}
+          onMouseLeave={() => {
+            setHoveredLink(null);
+          }}
+        >
+          SCROLLY
+        </Link>
+        <Link
+          to="/Alter"
+          className={`project-link ${hoveredLink === 'Alter' ? 'active' : ''}`}
+          onMouseEnter={() => setHoveredLink('Alter')}
+          onMouseLeave={() => setHoveredLink(null)}
+        >
+          ALTER
+        </Link>
+        <Link
+          to="/Helico"
+          className={`project-link ${hoveredLink === 'Helico' ? 'active' : ''}`}
+          onMouseEnter={() => setHoveredLink('Helico')}
+          onMouseLeave={() => setHoveredLink(null)}
+        >
+          HELICO PAT
+        </Link>
       </nav>
     </div>
   );
