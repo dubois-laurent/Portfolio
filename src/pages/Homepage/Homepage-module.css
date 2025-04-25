@@ -15,6 +15,7 @@ body {
 .logo {
     width: 80px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -22,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 25px;
 }
 
 .logo:hover {
@@ -38,6 +40,8 @@ body {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 1s ease, transform 1s ease;
+    position: relative;
+    top: 50%;
 }
 
 .logo-container:hover .logo-text {
