@@ -2,21 +2,18 @@ import React from 'react';
 import Home from "../../components/Home/Home";
 import { Link } from 'react-router-dom';
 import './Homepage-module.css';
-import logo from '../../assets/images/Logo.png';
+import Logo from '../../components/Logo/Logo';
 
 const HomePage: React.FC = () => {
 
     return (
         <div className="homeContainer">
             <header className="header">
-                <div className="logo-container">
-                    <img className="logo" src={logo} alt="mon logo" />
-                    <span className="logo-text">Laurent Dubois</span>
-                </div>
+                <Logo />
                 <nav className="nav">
-                    <Link to="/projects">My Projects</Link>
+                    <Link to="/projects" className='project'>My Projects</Link>
                     <p>👾</p>
-                    <Link to="/contact">Contact me !</Link>
+                    <Link to="/contact" className='contact'>Contact me !</Link>
                 </nav>
             </header>
             <div className="mainContainer">

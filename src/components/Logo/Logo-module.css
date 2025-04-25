@@ -1,0 +1,35 @@
+
+.logo-container {
+    position: fixed; /* Fixe le logo à une position */
+    top: 40px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 6px;
+    color: #d1e8e2;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.logo-container:hover .logo-text {
+    opacity: 1;
+    transform: translateY(0);
+}

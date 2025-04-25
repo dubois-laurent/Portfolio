@@ -1,9 +1,10 @@
 import React from 'react';
+import Logo from '../../components/Logo/Logo';
 
 const ContactPage: React.FC = () => {
   return (
     <div>
-      <h1>Contact</h1>
+      <Logo />
     </div>
   );
 };
