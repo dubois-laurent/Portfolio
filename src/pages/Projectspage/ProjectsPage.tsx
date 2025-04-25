@@ -19,15 +19,13 @@ const ProjectsPage: React.FC = () => {
         muted
         src={
           hoveredLink === 'SCROLLY'
-            ? '/videos/Bg-SCROLLY.mp4'
+            ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Scrolly.mp4'
             : hoveredLink === 'Alter'
             ? 'https://www.w3schools.com/html/mov_bbb.mp4'
             : hoveredLink === 'Helico'
             ? 'https://www.w3schools.com/html/mov_bbb.mp4'
             : 'http://localhost:3000/videos/Bg-Scrolly.mp4'
         }
-        onLoadedData={() => console.log('Video loaded: ', hoveredLink)}
-        onError={() => console.error('Error loading video: ', hoveredLink)}
       ></video>
       <nav className="nav-projects">
                 <Link
