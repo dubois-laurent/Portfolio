@@ -8,6 +8,14 @@ const HomePage: React.FC = () => {
 
     return (
         <div className="homeContainer">
+            <video
+        className="background-video"
+        autoPlay
+        loop
+        muted
+        src={'https://cdn.pixabay.com/video/2024/07/24/222962_large.mp4'
+        }
+      ></video>
             <header className="header">
                 <Logo />
                 <nav className="nav">

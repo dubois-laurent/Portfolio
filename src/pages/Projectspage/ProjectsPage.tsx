@@ -13,7 +13,7 @@ const ProjectsPage: React.FC = () => {
         <Logo />
       </Link>
       <video
-        className="background-video"
+        className="background-video-projects"
         autoPlay
         loop
         muted
@@ -24,7 +24,7 @@ const ProjectsPage: React.FC = () => {
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Alter.mp4'
             : hoveredLink === 'Helico'
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Php.mp4'
-            : 'http://localhost:3000/videos/Bg-Scrolly.mp4'
+            : 'https://cdn.pixabay.com/video/2019/10/11/27770-365891067_large.mp4'
         }
       ></video>
       <nav className="nav-projects">
