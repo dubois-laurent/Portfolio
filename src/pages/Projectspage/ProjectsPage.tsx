@@ -21,9 +21,9 @@ const ProjectsPage: React.FC = () => {
           hoveredLink === 'SCROLLY'
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Scrolly.mp4'
             : hoveredLink === 'Alter'
-            ? 'https://www.w3schools.com/html/mov_bbb.mp4'
+            ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Alter.mp4'
             : hoveredLink === 'Helico'
-            ? 'https://www.w3schools.com/html/mov_bbb.mp4'
+            ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Php.mp4'
             : 'http://localhost:3000/videos/Bg-Scrolly.mp4'
         }
       ></video>
