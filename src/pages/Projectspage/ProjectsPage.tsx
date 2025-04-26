@@ -1,11 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
 import './Projectspage-module.css';
 
+const preloadVideos = (videoUrls: string[]) => {
+  videoUrls.forEach((url) => {
+    const video = document.createElement('video');
+    video.src = url;
+    video.preload = 'auto';
+  });
+};
+
 const ProjectsPage: React.FC = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-  console.log(hoveredLink);
+
+  useEffect(() => {
+    preloadVideos([
+      'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Scrolly.mp4',
+      'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Alter.mp4',
+      'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Php.mp4'
+    ])
+  })
 
   return (
     <div className="projects-page">
@@ -17,6 +32,7 @@ const ProjectsPage: React.FC = () => {
         autoPlay
         loop
         muted
+        preload="auto"
         src={
           hoveredLink === 'SCROLLY'
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Scrolly.mp4'
