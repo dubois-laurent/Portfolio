@@ -49,7 +49,7 @@ const ProjectsPage: React.FC = () => {
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Alter.mp4'
             : hoveredLink === 'Helico'
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Php.mp4'
-            : '/videos/Bg-Scrolly.mp4'
+            : ''
         }
       ></video>
       <nav className="nav-projects">
