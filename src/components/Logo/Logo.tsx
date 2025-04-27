@@ -5,7 +5,7 @@ import './Logo-module.css';
 
 const Logo: React.FC = () => {
     return (
-        <Link to="/Portfolio" className="logo-container">
+        <Link to="/" className="logo-container">
             <img className="logo" src={logo} alt="mon logo" />
             <span className="logo-text">Laurent Dubois</span>
         </Link>

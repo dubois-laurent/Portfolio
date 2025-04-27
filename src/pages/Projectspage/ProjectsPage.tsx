@@ -25,7 +25,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <div className="projects-page">
-      <Link to="/Portfolio" className="home">
+      <Link to="/" className="home">
         <Logo />
       </Link>
       <video

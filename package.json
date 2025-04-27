@@ -49,5 +49,5 @@
     "@types/react-transition-group": "^4.4.12",
     "gh-pages": "^6.3.0"
   },
-  "homepage": "https://dubois-laurent.github.io/Portfolio/"
+  "homepage": "."
 }
