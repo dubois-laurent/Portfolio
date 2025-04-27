@@ -8,13 +8,11 @@ import './styles/global.css';
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Router>
         <Routes>
           <Route path="/Portfolio" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-      </Router>
     </div>
   );
 };

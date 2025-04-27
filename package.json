@@ -15,6 +15,7 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0",
     "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -45,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-transition-group": "^4.4.12",
     "gh-pages": "^6.3.0"
   },
   "homepage": "https://dubois-laurent.github.io/Portfolio/"

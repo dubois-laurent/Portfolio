@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
 import './Projectspage-module.css';
+import Footer from '../../components/Footer/Foooter';
 
 const preloadVideos = (videoUrls: string[]) => {
   videoUrls.forEach((url) => {
@@ -28,6 +29,14 @@ const ProjectsPage: React.FC = () => {
         <Logo />
       </Link>
       <video
+        className="background-video-pageprojects"
+        autoPlay
+        loop
+        muted
+        src={'https://cdn.pixabay.com/video/2023/06/29/169334-841069100_large.mp4'
+        }
+      ></video>
+      <video
         className="background-video-projects"
         autoPlay
         loop
@@ -40,7 +49,7 @@ const ProjectsPage: React.FC = () => {
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Alter.mp4'
             : hoveredLink === 'Helico'
             ? 'https://github.com/dubois-laurent/Portfolio/raw/refs/heads/dev/public/videos/Bg-Php.mp4'
-            : 'https://cdn.pixabay.com/video/2019/10/11/27770-365891067_large.mp4'
+            : '/videos/Bg-Scrolly.mp4'
         }
       ></video>
       <nav className="nav-projects">
@@ -73,6 +82,7 @@ const ProjectsPage: React.FC = () => {
           HELICO PAT
         </Link>
       </nav>
+      <Footer />
     </div>
   );
 };

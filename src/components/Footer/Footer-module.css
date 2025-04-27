@@ -1,0 +1,13 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  color: #d1e8e2;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  z-index: 10;
+}

@@ -44,9 +44,10 @@ body {
 }
 
 .dynamic-title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
-    color: #d1e8e2;
+    color: #e2deaa;
+    text-shadow: 0 0 5px #d400e7, 0 0 10px #00eeff;
     margin: 0;
 }
 
@@ -66,5 +67,5 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.1;
+    opacity: 0.5;
 }

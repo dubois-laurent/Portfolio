@@ -3,17 +3,18 @@ import Home from "../../components/Home/Home";
 import { Link } from 'react-router-dom';
 import './Homepage-module.css';
 import Logo from '../../components/Logo/Logo';
+import Footer from '../../components/Footer/Foooter';
 
 const HomePage: React.FC = () => {
 
     return (
         <div className="homeContainer">
-            <video
+        <video
         className="background-video"
         autoPlay
         loop
         muted
-        src={'https://cdn.pixabay.com/video/2024/07/24/222962_large.mp4'
+        src={'https://cdn.pixabay.com/video/2023/06/29/169334-841069100_large.mp4'
         }
       ></video>
             <header className="header">
@@ -27,6 +28,7 @@ const HomePage: React.FC = () => {
             <div className="mainContainer">
                 <Home />
             </div>
+            <Footer />
         </div>
     );
 };
